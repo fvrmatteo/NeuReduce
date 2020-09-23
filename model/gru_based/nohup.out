@@ -1,0 +1,535 @@
+Using TensorFlow backend.
+/home/dxu/anaconda3/envs/dnn3.6/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:516: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint8 = np.dtype([("qint8", np.int8, 1)])
+/home/dxu/anaconda3/envs/dnn3.6/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:517: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint8 = np.dtype([("quint8", np.uint8, 1)])
+/home/dxu/anaconda3/envs/dnn3.6/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:518: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint16 = np.dtype([("qint16", np.int16, 1)])
+/home/dxu/anaconda3/envs/dnn3.6/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:519: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint16 = np.dtype([("quint16", np.uint16, 1)])
+/home/dxu/anaconda3/envs/dnn3.6/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:520: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint32 = np.dtype([("qint32", np.int32, 1)])
+/home/dxu/anaconda3/envs/dnn3.6/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:525: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  np_resource = np.dtype([("resource", np.ubyte, 1)])
+/home/dxu/anaconda3/envs/dnn3.6/lib/python3.6/site-packages/tensorboard/compat/tensorflow_stub/dtypes.py:541: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint8 = np.dtype([("qint8", np.int8, 1)])
+/home/dxu/anaconda3/envs/dnn3.6/lib/python3.6/site-packages/tensorboard/compat/tensorflow_stub/dtypes.py:542: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint8 = np.dtype([("quint8", np.uint8, 1)])
+/home/dxu/anaconda3/envs/dnn3.6/lib/python3.6/site-packages/tensorboard/compat/tensorflow_stub/dtypes.py:543: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint16 = np.dtype([("qint16", np.int16, 1)])
+/home/dxu/anaconda3/envs/dnn3.6/lib/python3.6/site-packages/tensorboard/compat/tensorflow_stub/dtypes.py:544: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint16 = np.dtype([("quint16", np.uint16, 1)])
+/home/dxu/anaconda3/envs/dnn3.6/lib/python3.6/site-packages/tensorboard/compat/tensorflow_stub/dtypes.py:545: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint32 = np.dtype([("qint32", np.int32, 1)])
+/home/dxu/anaconda3/envs/dnn3.6/lib/python3.6/site-packages/tensorboard/compat/tensorflow_stub/dtypes.py:550: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  np_resource = np.dtype([("resource", np.ubyte, 1)])
+Number of used CPUs: 28
+file_path is a directory
+File list:
+../../data/linear/train/more_varis.csv
+../../data/linear/train/2_varis.csv
+../../data/linear/train/3_varis.csv
+#Number of datas: 1000000
+Number of data: 1000000
+Number of unique input tokens: 24
+Number of unique target tokens: 26
+Max sequence length of inputs: 100
+Max sequence length of targets: 37
+WARNING:tensorflow:From /home/dxu/.local/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py:72: The name tf.get_default_graph is deprecated. Please use tf.compat.v1.get_default_graph instead.
+
+WARNING:tensorflow:From /home/dxu/.local/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py:515: The name tf.placeholder is deprecated. Please use tf.compat.v1.placeholder instead.
+
+2020-01-12 07:32:40.427561: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+2020-01-12 07:32:40.449163: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2400085000 Hz
+2020-01-12 07:32:40.452130: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x56151f3422b0 executing computations on platform Host. Devices:
+2020-01-12 07:32:40.452158: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+2020-01-12 07:32:40.453514: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcuda.so.1
+2020-01-12 07:32:41.212328: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1640] Found device 0 with properties: 
+name: TITAN Xp major: 6 minor: 1 memoryClockRate(GHz): 1.582
+pciBusID: 0000:09:00.0
+2020-01-12 07:32:41.212601: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcudart.so.10.1
+2020-01-12 07:32:41.214801: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcublas.so.10
+2020-01-12 07:32:41.216752: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcufft.so.10
+2020-01-12 07:32:41.217089: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcurand.so.10
+2020-01-12 07:32:41.219513: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcusolver.so.10
+2020-01-12 07:32:41.220769: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcusparse.so.10
+2020-01-12 07:32:41.225976: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcudnn.so.7
+2020-01-12 07:32:41.227695: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1763] Adding visible gpu devices: 0
+2020-01-12 07:32:41.227743: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcudart.so.10.1
+2020-01-12 07:32:41.454858: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1181] Device interconnect StreamExecutor with strength 1 edge matrix:
+2020-01-12 07:32:41.454917: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1187]      0 
+2020-01-12 07:32:41.454926: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1200] 0:   N 
+2020-01-12 07:32:41.457682: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1326] Created TensorFlow device (/device:GPU:0 with 11439 MB memory) -> physical GPU (device: 0, name: TITAN Xp, pci bus id: 0000:09:00.0, compute capability: 6.1)
+2020-01-12 07:32:41.459774: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x561523615cd0 executing computations on platform CUDA. Devices:
+2020-01-12 07:32:41.459795: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): TITAN Xp, Compute Capability 6.1
+WARNING:tensorflow:From /home/dxu/.local/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py:4048: The name tf.random_uniform is deprecated. Please use tf.random.uniform instead.
+
+2020-01-12 07:32:42.217599: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1640] Found device 0 with properties: 
+name: TITAN Xp major: 6 minor: 1 memoryClockRate(GHz): 1.582
+pciBusID: 0000:09:00.0
+2020-01-12 07:32:42.217672: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcudart.so.10.1
+2020-01-12 07:32:42.217712: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcublas.so.10
+2020-01-12 07:32:42.217733: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcufft.so.10
+2020-01-12 07:32:42.217752: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcurand.so.10
+2020-01-12 07:32:42.217774: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcusolver.so.10
+2020-01-12 07:32:42.217795: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcusparse.so.10
+2020-01-12 07:32:42.217815: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcudnn.so.7
+2020-01-12 07:32:42.219459: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1763] Adding visible gpu devices: 0
+2020-01-12 07:32:42.219508: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1181] Device interconnect StreamExecutor with strength 1 edge matrix:
+2020-01-12 07:32:42.219517: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1187]      0 
+2020-01-12 07:32:42.219525: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1200] 0:   N 
+2020-01-12 07:32:42.221229: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1326] Created TensorFlow device (/device:GPU:0 with 11439 MB memory) -> physical GPU (device: 0, name: TITAN Xp, pci bus id: 0000:09:00.0, compute capability: 6.1)
+WARNING:tensorflow:From /home/dxu/.local/lib/python3.6/site-packages/keras/optimizers.py:782: The name tf.train.Optimizer is deprecated. Please use tf.compat.v1.train.Optimizer instead.
+
+WARNING:tensorflow:From /home/dxu/.local/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py:3218: The name tf.log is deprecated. Please use tf.math.log instead.
+
+WARNING:tensorflow:From /home/dxu/mba_workspace/ai-mba/model/gru/utils.py:109: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+__________________________________________________________________________________________________
+Layer (type)                    Output Shape         Param #     Connected to                     
+==================================================================================================
+input_1 (InputLayer)            (None, None, 24)     0                                            
+__________________________________________________________________________________________________
+input_2 (InputLayer)            (None, None, 26)     0                                            
+__________________________________________________________________________________________________
+cu_dnngru_1 (CuDNNGRU)          [(None, 256), (None, 216576      input_1[0][0]                    
+__________________________________________________________________________________________________
+cu_dnngru_2 (CuDNNGRU)          [(None, None, 256),  218112      input_2[0][0]                    
+                                                                 cu_dnngru_1[0][1]                
+__________________________________________________________________________________________________
+dense_1 (Dense)                 (None, None, 26)     6682        cu_dnngru_2[0][0]                
+==================================================================================================
+Total params: 441,370
+Trainable params: 441,370
+Non-trainable params: 0
+__________________________________________________________________________________________________
+Start training...
+WARNING:tensorflow:From /home/dxu/.local/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py:984: The name tf.assign_add is deprecated. Please use tf.compat.v1.assign_add instead.
+
+Epoch 1/1000
+2020-01-12 07:32:45.191207: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1640] Found device 0 with properties: 
+name: TITAN Xp major: 6 minor: 1 memoryClockRate(GHz): 1.582
+pciBusID: 0000:09:00.0
+2020-01-12 07:32:45.191326: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcudart.so.10.1
+2020-01-12 07:32:45.191351: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcublas.so.10
+2020-01-12 07:32:45.191375: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcufft.so.10
+2020-01-12 07:32:45.191400: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcurand.so.10
+2020-01-12 07:32:45.191423: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcusolver.so.10
+2020-01-12 07:32:45.191448: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcusparse.so.10
+2020-01-12 07:32:45.191474: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcudnn.so.7
+2020-01-12 07:32:45.193136: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1763] Adding visible gpu devices: 0
+2020-01-12 07:32:45.193200: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1181] Device interconnect StreamExecutor with strength 1 edge matrix:
+2020-01-12 07:32:45.193210: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1187]      0 
+2020-01-12 07:32:45.193218: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1200] 0:   N 
+2020-01-12 07:32:45.194972: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1326] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 11439 MB memory) -> physical GPU (device: 0, name: TITAN Xp, pci bus id: 0000:09:00.0, compute capability: 6.1)
+2020-01-12 07:32:46.831989: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcublas.so.10
+2020-01-12 07:32:47.161032: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcudnn.so.7
+ - 61s - loss: 0.2742 - match_rate: 0.0107 - val_loss: 0.1769 - val_match_rate: 0.0197
+Epoch 2/1000
+ - 59s - loss: 0.1589 - match_rate: 0.0250 - val_loss: 0.1435 - val_match_rate: 0.0312
+Epoch 3/1000
+ - 58s - loss: 0.1364 - match_rate: 0.0381 - val_loss: 0.1283 - val_match_rate: 0.0534
+Epoch 4/1000
+ - 59s - loss: 0.1185 - match_rate: 0.0780 - val_loss: 0.1080 - val_match_rate: 0.1085
+Epoch 5/1000
+ - 58s - loss: 0.0987 - match_rate: 0.1427 - val_loss: 0.0899 - val_match_rate: 0.1803
+Epoch 6/1000
+ - 58s - loss: 0.0824 - match_rate: 0.2192 - val_loss: 0.0777 - val_match_rate: 0.2395
+Epoch 7/1000
+ - 60s - loss: 0.0707 - match_rate: 0.2952 - val_loss: 0.0692 - val_match_rate: 0.3106
+Epoch 8/1000
+ - 59s - loss: 0.0617 - match_rate: 0.3655 - val_loss: 0.0577 - val_match_rate: 0.4048
+Epoch 9/1000
+ - 59s - loss: 0.0545 - match_rate: 0.4351 - val_loss: 0.0515 - val_match_rate: 0.4696
+Epoch 10/1000
+ - 59s - loss: 0.0485 - match_rate: 0.4987 - val_loss: 0.0448 - val_match_rate: 0.5440
+Epoch 11/1000
+ - 59s - loss: 0.0431 - match_rate: 0.5588 - val_loss: 0.0416 - val_match_rate: 0.5771
+Epoch 12/1000
+ - 59s - loss: 0.0390 - match_rate: 0.6056 - val_loss: 0.0353 - val_match_rate: 0.6525
+Epoch 13/1000
+ - 59s - loss: 0.0350 - match_rate: 0.6539 - val_loss: 0.0317 - val_match_rate: 0.6990
+Epoch 14/1000
+ - 59s - loss: 0.0319 - match_rate: 0.6906 - val_loss: 0.0310 - val_match_rate: 0.7011
+Epoch 15/1000
+ - 58s - loss: 0.0290 - match_rate: 0.7246 - val_loss: 0.0286 - val_match_rate: 0.7283
+Epoch 16/1000
+ - 58s - loss: 0.0268 - match_rate: 0.7517 - val_loss: 0.0280 - val_match_rate: 0.7459
+Epoch 17/1000
+ - 58s - loss: 0.0248 - match_rate: 0.7733 - val_loss: 0.0258 - val_match_rate: 0.7751
+Epoch 18/1000
+ - 59s - loss: 0.0231 - match_rate: 0.7934 - val_loss: 0.0243 - val_match_rate: 0.7753
+Epoch 19/1000
+ - 59s - loss: 0.0216 - match_rate: 0.8109 - val_loss: 0.0244 - val_match_rate: 0.7653
+Epoch 20/1000
+ - 59s - loss: 0.0204 - match_rate: 0.8246 - val_loss: 0.0200 - val_match_rate: 0.8311
+Epoch 21/1000
+ - 59s - loss: 0.0194 - match_rate: 0.8371 - val_loss: 0.0193 - val_match_rate: 0.8369
+Epoch 22/1000
+ - 59s - loss: 0.0189 - match_rate: 0.8413 - val_loss: 0.0190 - val_match_rate: 0.8412
+Epoch 23/1000
+ - 60s - loss: 0.0179 - match_rate: 0.8535 - val_loss: 0.0181 - val_match_rate: 0.8557
+Epoch 24/1000
+ - 59s - loss: 0.0174 - match_rate: 0.8589 - val_loss: 0.0170 - val_match_rate: 0.8665
+Epoch 25/1000
+ - 60s - loss: 0.0169 - match_rate: 0.8636 - val_loss: 0.0166 - val_match_rate: 0.8717
+Epoch 26/1000
+ - 59s - loss: 0.0160 - match_rate: 0.8745 - val_loss: 0.0169 - val_match_rate: 0.8689
+Epoch 27/1000
+ - 58s - loss: 0.0158 - match_rate: 0.8758 - val_loss: 0.0192 - val_match_rate: 0.8389
+Epoch 28/1000
+ - 59s - loss: 0.0151 - match_rate: 0.8850 - val_loss: 0.0151 - val_match_rate: 0.8878
+Epoch 29/1000
+ - 59s - loss: 0.0150 - match_rate: 0.8854 - val_loss: 0.0150 - val_match_rate: 0.8849
+Epoch 30/1000
+ - 58s - loss: 0.0143 - match_rate: 0.8930 - val_loss: 0.0143 - val_match_rate: 0.8992
+Epoch 31/1000
+ - 59s - loss: 0.0140 - match_rate: 0.8967 - val_loss: 0.0133 - val_match_rate: 0.9100
+Epoch 32/1000
+ - 58s - loss: 0.0137 - match_rate: 0.8996 - val_loss: 0.0139 - val_match_rate: 0.8996
+Epoch 33/1000
+ - 60s - loss: 0.0134 - match_rate: 0.9019 - val_loss: 0.0135 - val_match_rate: 0.9042
+Epoch 34/1000
+ - 58s - loss: 0.0131 - match_rate: 0.9053 - val_loss: 0.0132 - val_match_rate: 0.9098
+Epoch 35/1000
+ - 59s - loss: 0.0127 - match_rate: 0.9093 - val_loss: 0.0136 - val_match_rate: 0.9019
+Epoch 36/1000
+ - 59s - loss: 0.0127 - match_rate: 0.9086 - val_loss: 0.0134 - val_match_rate: 0.9038
+Epoch 37/1000
+ - 60s - loss: 0.0122 - match_rate: 0.9137 - val_loss: 0.0125 - val_match_rate: 0.9135
+Epoch 38/1000
+ - 59s - loss: 0.0122 - match_rate: 0.9129 - val_loss: 0.0121 - val_match_rate: 0.9182
+Epoch 39/1000
+ - 60s - loss: 0.0119 - match_rate: 0.9165 - val_loss: 0.0127 - val_match_rate: 0.9119
+Epoch 40/1000
+ - 59s - loss: 0.0116 - match_rate: 0.9177 - val_loss: 0.0120 - val_match_rate: 0.9172
+Epoch 41/1000
+ - 59s - loss: 0.0114 - match_rate: 0.9202 - val_loss: 0.0117 - val_match_rate: 0.9209
+Epoch 42/1000
+ - 59s - loss: 0.0112 - match_rate: 0.9217 - val_loss: 0.0113 - val_match_rate: 0.9268
+Epoch 43/1000
+ - 59s - loss: 0.0110 - match_rate: 0.9228 - val_loss: 0.0118 - val_match_rate: 0.9177
+Epoch 44/1000
+ - 59s - loss: 0.0109 - match_rate: 0.9230 - val_loss: 0.0109 - val_match_rate: 0.9267
+Epoch 45/1000
+ - 60s - loss: 0.0107 - match_rate: 0.9248 - val_loss: 0.0110 - val_match_rate: 0.9274
+Epoch 46/1000
+ - 59s - loss: 0.0105 - match_rate: 0.9258 - val_loss: 0.0105 - val_match_rate: 0.9332
+Epoch 47/1000
+ - 59s - loss: 0.0103 - match_rate: 0.9280 - val_loss: 0.0118 - val_match_rate: 0.9157
+Epoch 48/1000
+ - 60s - loss: 0.0101 - match_rate: 0.9291 - val_loss: 0.0107 - val_match_rate: 0.9258
+Epoch 49/1000
+ - 59s - loss: 0.0100 - match_rate: 0.9294 - val_loss: 0.0117 - val_match_rate: 0.9143
+Epoch 50/1000
+ - 60s - loss: 0.0099 - match_rate: 0.9305 - val_loss: 0.0105 - val_match_rate: 0.9299
+Epoch 51/1000
+ - 58s - loss: 0.0097 - match_rate: 0.9314 - val_loss: 0.0098 - val_match_rate: 0.9379
+Epoch 52/1000
+ - 60s - loss: 0.0096 - match_rate: 0.9316 - val_loss: 0.0100 - val_match_rate: 0.9344
+Epoch 53/1000
+ - 59s - loss: 0.0095 - match_rate: 0.9331 - val_loss: 0.0117 - val_match_rate: 0.9097
+Epoch 54/1000
+ - 59s - loss: 0.0093 - match_rate: 0.9343 - val_loss: 0.0105 - val_match_rate: 0.9266
+Epoch 55/1000
+ - 59s - loss: 0.0092 - match_rate: 0.9355 - val_loss: 0.0099 - val_match_rate: 0.9327
+Epoch 56/1000
+ - 59s - loss: 0.0091 - match_rate: 0.9362 - val_loss: 0.0099 - val_match_rate: 0.9344
+Epoch 57/1000
+ - 59s - loss: 0.0090 - match_rate: 0.9363 - val_loss: 0.0096 - val_match_rate: 0.9374
+Epoch 58/1000
+ - 60s - loss: 0.0089 - match_rate: 0.9366 - val_loss: 0.0099 - val_match_rate: 0.9316
+Epoch 59/1000
+ - 59s - loss: 0.0087 - match_rate: 0.9384 - val_loss: 0.0098 - val_match_rate: 0.9345
+Epoch 60/1000
+ - 61s - loss: 0.0087 - match_rate: 0.9385 - val_loss: 0.0097 - val_match_rate: 0.9344
+Epoch 61/1000
+ - 58s - loss: 0.0086 - match_rate: 0.9393 - val_loss: 0.0101 - val_match_rate: 0.9269
+Epoch 62/1000
+ - 59s - loss: 0.0085 - match_rate: 0.9397 - val_loss: 0.0095 - val_match_rate: 0.9337
+Epoch 63/1000
+ - 59s - loss: 0.0084 - match_rate: 0.9400 - val_loss: 0.0105 - val_match_rate: 0.9256
+Epoch 64/1000
+ - 59s - loss: 0.0083 - match_rate: 0.9405 - val_loss: 0.0098 - val_match_rate: 0.9293
+Epoch 65/1000
+ - 59s - loss: 0.0083 - match_rate: 0.9405 - val_loss: 0.0092 - val_match_rate: 0.9371
+Epoch 66/1000
+ - 59s - loss: 0.0082 - match_rate: 0.9407 - val_loss: 0.0096 - val_match_rate: 0.9359
+Epoch 67/1000
+ - 60s - loss: 0.0081 - match_rate: 0.9416 - val_loss: 0.0090 - val_match_rate: 0.9384
+Epoch 68/1000
+ - 59s - loss: 0.0080 - match_rate: 0.9426 - val_loss: 0.0101 - val_match_rate: 0.9291
+Epoch 69/1000
+ - 59s - loss: 0.0079 - match_rate: 0.9425 - val_loss: 0.0094 - val_match_rate: 0.9334
+Epoch 70/1000
+ - 61s - loss: 0.0079 - match_rate: 0.9428 - val_loss: 0.0088 - val_match_rate: 0.9401
+Epoch 71/1000
+ - 60s - loss: 0.0078 - match_rate: 0.9434 - val_loss: 0.0093 - val_match_rate: 0.9331
+Epoch 72/1000
+ - 58s - loss: 0.0077 - match_rate: 0.9440 - val_loss: 0.0094 - val_match_rate: 0.9318
+Epoch 73/1000
+ - 59s - loss: 0.0076 - match_rate: 0.9442 - val_loss: 0.0084 - val_match_rate: 0.9442
+Epoch 74/1000
+ - 59s - loss: 0.0075 - match_rate: 0.9453 - val_loss: 0.0086 - val_match_rate: 0.9436
+Epoch 75/1000
+ - 61s - loss: 0.0075 - match_rate: 0.9452 - val_loss: 0.0089 - val_match_rate: 0.9388
+Epoch 76/1000
+ - 59s - loss: 0.0074 - match_rate: 0.9456 - val_loss: 0.0089 - val_match_rate: 0.9388
+Epoch 77/1000
+ - 59s - loss: 0.0073 - match_rate: 0.9459 - val_loss: 0.0087 - val_match_rate: 0.9409
+Epoch 78/1000
+ - 61s - loss: 0.0073 - match_rate: 0.9460 - val_loss: 0.0091 - val_match_rate: 0.9366
+Epoch 79/1000
+ - 59s - loss: 0.0071 - match_rate: 0.9467 - val_loss: 0.0081 - val_match_rate: 0.9459
+Epoch 80/1000
+ - 60s - loss: 0.0072 - match_rate: 0.9464 - val_loss: 0.0088 - val_match_rate: 0.9385
+Epoch 81/1000
+ - 60s - loss: 0.0070 - match_rate: 0.9473 - val_loss: 0.0086 - val_match_rate: 0.9457
+Epoch 82/1000
+ - 58s - loss: 0.0070 - match_rate: 0.9473 - val_loss: 0.0085 - val_match_rate: 0.9436
+Epoch 83/1000
+ - 60s - loss: 0.0070 - match_rate: 0.9477 - val_loss: 0.0084 - val_match_rate: 0.9422
+Epoch 84/1000
+ - 60s - loss: 0.0069 - match_rate: 0.9481 - val_loss: 0.0085 - val_match_rate: 0.9405
+Epoch 85/1000
+ - 59s - loss: 0.0068 - match_rate: 0.9481 - val_loss: 0.0082 - val_match_rate: 0.9441
+Epoch 86/1000
+ - 61s - loss: 0.0068 - match_rate: 0.9482 - val_loss: 0.0081 - val_match_rate: 0.9429
+Epoch 87/1000
+ - 60s - loss: 0.0067 - match_rate: 0.9484 - val_loss: 0.0107 - val_match_rate: 0.9108
+Epoch 88/1000
+ - 60s - loss: 0.0066 - match_rate: 0.9492 - val_loss: 0.0091 - val_match_rate: 0.9332
+Epoch 89/1000
+ - 60s - loss: 0.0066 - match_rate: 0.9490 - val_loss: 0.0077 - val_match_rate: 0.9478
+Epoch 90/1000
+ - 59s - loss: 0.0066 - match_rate: 0.9494 - val_loss: 0.0089 - val_match_rate: 0.9342
+Epoch 91/1000
+ - 60s - loss: 0.0065 - match_rate: 0.9497 - val_loss: 0.0092 - val_match_rate: 0.9320
+Epoch 92/1000
+ - 59s - loss: 0.0064 - match_rate: 0.9501 - val_loss: 0.0078 - val_match_rate: 0.9480
+Epoch 93/1000
+ - 59s - loss: 0.0064 - match_rate: 0.9501 - val_loss: 0.0079 - val_match_rate: 0.9452
+Epoch 94/1000
+ - 59s - loss: 0.0064 - match_rate: 0.9500 - val_loss: 0.0080 - val_match_rate: 0.9448
+Epoch 95/1000
+ - 59s - loss: 0.0063 - match_rate: 0.9507 - val_loss: 0.0080 - val_match_rate: 0.9440
+Epoch 96/1000
+ - 60s - loss: 0.0063 - match_rate: 0.9503 - val_loss: 0.0078 - val_match_rate: 0.9458
+Epoch 97/1000
+ - 60s - loss: 0.0062 - match_rate: 0.9511 - val_loss: 0.0080 - val_match_rate: 0.9447
+Epoch 98/1000
+ - 59s - loss: 0.0063 - match_rate: 0.9506 - val_loss: 0.0083 - val_match_rate: 0.9445
+Epoch 99/1000
+ - 61s - loss: 0.0062 - match_rate: 0.9512 - val_loss: 0.0080 - val_match_rate: 0.9439
+Epoch 100/1000
+ - 59s - loss: 0.0062 - match_rate: 0.9509 - val_loss: 0.0078 - val_match_rate: 0.9463
+Epoch 101/1000
+ - 60s - loss: 0.0061 - match_rate: 0.9521 - val_loss: 0.0078 - val_match_rate: 0.9448
+Epoch 102/1000
+ - 60s - loss: 0.0061 - match_rate: 0.9515 - val_loss: 0.0077 - val_match_rate: 0.9479
+Epoch 103/1000
+ - 58s - loss: 0.0060 - match_rate: 0.9525 - val_loss: 0.0077 - val_match_rate: 0.9495
+Epoch 104/1000
+ - 59s - loss: 0.0060 - match_rate: 0.9520 - val_loss: 0.0087 - val_match_rate: 0.9369
+Epoch 105/1000
+ - 59s - loss: 0.0060 - match_rate: 0.9519 - val_loss: 0.0079 - val_match_rate: 0.9443
+Epoch 106/1000
+ - 58s - loss: 0.0059 - match_rate: 0.9526 - val_loss: 0.0082 - val_match_rate: 0.9416
+Epoch 107/1000
+ - 60s - loss: 0.0059 - match_rate: 0.9528 - val_loss: 0.0086 - val_match_rate: 0.9331
+Epoch 108/1000
+ - 59s - loss: 0.0059 - match_rate: 0.9525 - val_loss: 0.0078 - val_match_rate: 0.9466
+Epoch 109/1000
+ - 59s - loss: 0.0058 - match_rate: 0.9530 - val_loss: 0.0077 - val_match_rate: 0.9475
+Epoch 110/1000
+ - 60s - loss: 0.0058 - match_rate: 0.9536 - val_loss: 0.0079 - val_match_rate: 0.9437
+Epoch 111/1000
+ - 59s - loss: 0.0058 - match_rate: 0.9526 - val_loss: 0.0077 - val_match_rate: 0.9471
+Epoch 112/1000
+ - 58s - loss: 0.0057 - match_rate: 0.9536 - val_loss: 0.0077 - val_match_rate: 0.9470
+Epoch 113/1000
+ - 60s - loss: 0.0057 - match_rate: 0.9536 - val_loss: 0.0081 - val_match_rate: 0.9405
+Epoch 114/1000
+ - 60s - loss: 0.0056 - match_rate: 0.9535 - val_loss: 0.0081 - val_match_rate: 0.9443
+Epoch 115/1000
+ - 59s - loss: 0.0056 - match_rate: 0.9545 - val_loss: 0.0077 - val_match_rate: 0.9468
+Epoch 116/1000
+ - 58s - loss: 0.0056 - match_rate: 0.9541 - val_loss: 0.0073 - val_match_rate: 0.9521
+Epoch 117/1000
+ - 58s - loss: 0.0056 - match_rate: 0.9544 - val_loss: 0.0076 - val_match_rate: 0.9460
+Epoch 118/1000
+ - 59s - loss: 0.0056 - match_rate: 0.9539 - val_loss: 0.0077 - val_match_rate: 0.9493
+Epoch 119/1000
+ - 59s - loss: 0.0055 - match_rate: 0.9542 - val_loss: 0.0081 - val_match_rate: 0.9423
+Epoch 120/1000
+ - 60s - loss: 0.0055 - match_rate: 0.9545 - val_loss: 0.0079 - val_match_rate: 0.9453
+Epoch 121/1000
+ - 60s - loss: 0.0055 - match_rate: 0.9548 - val_loss: 0.0077 - val_match_rate: 0.9453
+Epoch 122/1000
+ - 59s - loss: 0.0055 - match_rate: 0.9547 - val_loss: 0.0077 - val_match_rate: 0.9465
+Epoch 123/1000
+ - 60s - loss: 0.0055 - match_rate: 0.9548 - val_loss: 0.0076 - val_match_rate: 0.9490
+Epoch 124/1000
+ - 59s - loss: 0.0055 - match_rate: 0.9547 - val_loss: 0.0076 - val_match_rate: 0.9492
+Epoch 125/1000
+ - 58s - loss: 0.0040 - match_rate: 0.9678 - val_loss: 0.0062 - val_match_rate: 0.9620
+Epoch 126/1000
+ - 61s - loss: 0.0038 - match_rate: 0.9687 - val_loss: 0.0062 - val_match_rate: 0.9618
+Epoch 127/1000
+ - 59s - loss: 0.0038 - match_rate: 0.9689 - val_loss: 0.0063 - val_match_rate: 0.9621
+Epoch 128/1000
+ - 60s - loss: 0.0037 - match_rate: 0.9692 - val_loss: 0.0063 - val_match_rate: 0.9623
+Epoch 129/1000
+ - 59s - loss: 0.0037 - match_rate: 0.9695 - val_loss: 0.0064 - val_match_rate: 0.9617
+Epoch 130/1000
+ - 60s - loss: 0.0036 - match_rate: 0.9696 - val_loss: 0.0064 - val_match_rate: 0.9617
+Epoch 131/1000
+ - 61s - loss: 0.0036 - match_rate: 0.9698 - val_loss: 0.0063 - val_match_rate: 0.9625
+Epoch 132/1000
+ - 60s - loss: 0.0035 - match_rate: 0.9699 - val_loss: 0.0065 - val_match_rate: 0.9616
+Epoch 133/1000
+ - 60s - loss: 0.0035 - match_rate: 0.9701 - val_loss: 0.0066 - val_match_rate: 0.9613
+Epoch 134/1000
+ - 60s - loss: 0.0035 - match_rate: 0.9701 - val_loss: 0.0065 - val_match_rate: 0.9621
+Epoch 135/1000
+ - 61s - loss: 0.0034 - match_rate: 0.9703 - val_loss: 0.0065 - val_match_rate: 0.9620
+Epoch 136/1000
+ - 59s - loss: 0.0034 - match_rate: 0.9704 - val_loss: 0.0066 - val_match_rate: 0.9619
+Epoch 137/1000
+ - 61s - loss: 0.0034 - match_rate: 0.9705 - val_loss: 0.0066 - val_match_rate: 0.9617
+Epoch 138/1000
+ - 60s - loss: 0.0034 - match_rate: 0.9706 - val_loss: 0.0066 - val_match_rate: 0.9624
+Epoch 139/1000
+ - 60s - loss: 0.0033 - match_rate: 0.9708 - val_loss: 0.0067 - val_match_rate: 0.9619
+Epoch 140/1000
+ - 60s - loss: 0.0033 - match_rate: 0.9710 - val_loss: 0.0067 - val_match_rate: 0.9621
+Epoch 141/1000
+ - 59s - loss: 0.0033 - match_rate: 0.9709 - val_loss: 0.0068 - val_match_rate: 0.9611
+Epoch 142/1000
+ - 59s - loss: 0.0033 - match_rate: 0.9712 - val_loss: 0.0068 - val_match_rate: 0.9620
+Epoch 143/1000
+ - 59s - loss: 0.0032 - match_rate: 0.9712 - val_loss: 0.0069 - val_match_rate: 0.9617
+Epoch 144/1000
+ - 59s - loss: 0.0032 - match_rate: 0.9714 - val_loss: 0.0069 - val_match_rate: 0.9619
+Epoch 145/1000
+ - 60s - loss: 0.0032 - match_rate: 0.9716 - val_loss: 0.0069 - val_match_rate: 0.9616
+Epoch 146/1000
+ - 59s - loss: 0.0032 - match_rate: 0.9715 - val_loss: 0.0069 - val_match_rate: 0.9618
+Epoch 147/1000
+ - 59s - loss: 0.0031 - match_rate: 0.9716 - val_loss: 0.0069 - val_match_rate: 0.9621
+Epoch 148/1000
+ - 60s - loss: 0.0031 - match_rate: 0.9720 - val_loss: 0.0071 - val_match_rate: 0.9612
+Epoch 149/1000
+ - 60s - loss: 0.0031 - match_rate: 0.9720 - val_loss: 0.0070 - val_match_rate: 0.9615
+Epoch 150/1000
+ - 60s - loss: 0.0031 - match_rate: 0.9720 - val_loss: 0.0070 - val_match_rate: 0.9619
+Epoch 151/1000
+ - 60s - loss: 0.0031 - match_rate: 0.9722 - val_loss: 0.0072 - val_match_rate: 0.9613
+Epoch 152/1000
+ - 59s - loss: 0.0030 - match_rate: 0.9723 - val_loss: 0.0072 - val_match_rate: 0.9612
+Epoch 153/1000
+ - 59s - loss: 0.0030 - match_rate: 0.9724 - val_loss: 0.0072 - val_match_rate: 0.9615
+Epoch 154/1000
+ - 60s - loss: 0.0030 - match_rate: 0.9724 - val_loss: 0.0072 - val_match_rate: 0.9617
+Epoch 155/1000
+ - 59s - loss: 0.0027 - match_rate: 0.9743 - val_loss: 0.0072 - val_match_rate: 0.9625
+Epoch 156/1000
+ - 59s - loss: 0.0027 - match_rate: 0.9745 - val_loss: 0.0072 - val_match_rate: 0.9623
+Epoch 157/1000
+ - 60s - loss: 0.0027 - match_rate: 0.9747 - val_loss: 0.0072 - val_match_rate: 0.9623
+Epoch 158/1000
+ - 60s - loss: 0.0027 - match_rate: 0.9748 - val_loss: 0.0073 - val_match_rate: 0.9621
+Epoch 159/1000
+ - 59s - loss: 0.0026 - match_rate: 0.9748 - val_loss: 0.0073 - val_match_rate: 0.9621
+Epoch 160/1000
+ - 59s - loss: 0.0026 - match_rate: 0.9750 - val_loss: 0.0073 - val_match_rate: 0.9623
+Epoch 161/1000
+ - 59s - loss: 0.0026 - match_rate: 0.9749 - val_loss: 0.0074 - val_match_rate: 0.9619
+Epoch 162/1000
+ - 59s - loss: 0.0026 - match_rate: 0.9752 - val_loss: 0.0074 - val_match_rate: 0.9620
+Epoch 163/1000
+ - 60s - loss: 0.0026 - match_rate: 0.9753 - val_loss: 0.0074 - val_match_rate: 0.9616
+Epoch 164/1000
+ - 60s - loss: 0.0026 - match_rate: 0.9754 - val_loss: 0.0075 - val_match_rate: 0.9619
+Epoch 165/1000
+ - 59s - loss: 0.0026 - match_rate: 0.9754 - val_loss: 0.0075 - val_match_rate: 0.9619
+Epoch 166/1000
+ - 60s - loss: 0.0025 - match_rate: 0.9758 - val_loss: 0.0075 - val_match_rate: 0.9619
+Epoch 167/1000
+ - 59s - loss: 0.0025 - match_rate: 0.9759 - val_loss: 0.0075 - val_match_rate: 0.9619
+Epoch 168/1000
+ - 59s - loss: 0.0025 - match_rate: 0.9759 - val_loss: 0.0075 - val_match_rate: 0.9619
+Epoch 169/1000
+ - 61s - loss: 0.0025 - match_rate: 0.9759 - val_loss: 0.0075 - val_match_rate: 0.9619
+Epoch 170/1000
+ - 60s - loss: 0.0025 - match_rate: 0.9760 - val_loss: 0.0075 - val_match_rate: 0.9619
+Epoch 171/1000
+ - 60s - loss: 0.0025 - match_rate: 0.9760 - val_loss: 0.0076 - val_match_rate: 0.9619
+Epoch 172/1000
+ - 59s - loss: 0.0025 - match_rate: 0.9761 - val_loss: 0.0076 - val_match_rate: 0.9618
+Epoch 173/1000
+ - 59s - loss: 0.0025 - match_rate: 0.9761 - val_loss: 0.0076 - val_match_rate: 0.9619
+Epoch 174/1000
+ - 59s - loss: 0.0025 - match_rate: 0.9762 - val_loss: 0.0075 - val_match_rate: 0.9619
+Epoch 175/1000
+ - 59s - loss: 0.0025 - match_rate: 0.9762 - val_loss: 0.0075 - val_match_rate: 0.9620
+Epoch 176/1000
+ - 59s - loss: 0.0025 - match_rate: 0.9762 - val_loss: 0.0075 - val_match_rate: 0.9620
+Epoch 177/1000
+ - 60s - loss: 0.0025 - match_rate: 0.9762 - val_loss: 0.0075 - val_match_rate: 0.9619
+Epoch 178/1000
+ - 60s - loss: 0.0025 - match_rate: 0.9762 - val_loss: 0.0076 - val_match_rate: 0.9619
+Epoch 179/1000
+ - 59s - loss: 0.0025 - match_rate: 0.9762 - val_loss: 0.0076 - val_match_rate: 0.9620
+Epoch 180/1000
+ - 59s - loss: 0.0025 - match_rate: 0.9762 - val_loss: 0.0076 - val_match_rate: 0.9619
+Epoch 181/1000
+ - 61s - loss: 0.0025 - match_rate: 0.9762 - val_loss: 0.0076 - val_match_rate: 0.9619
+Epoch 182/1000
+ - 59s - loss: 0.0025 - match_rate: 0.9762 - val_loss: 0.0076 - val_match_rate: 0.9620
+Epoch 183/1000
+ - 59s - loss: 0.0025 - match_rate: 0.9762 - val_loss: 0.0076 - val_match_rate: 0.9619
+Epoch 184/1000
+ - 59s - loss: 0.0025 - match_rate: 0.9762 - val_loss: 0.0075 - val_match_rate: 0.9620
+Epoch 185/1000
+ - 59s - loss: 0.0025 - match_rate: 0.9762 - val_loss: 0.0075 - val_match_rate: 0.9620
+Epoch 186/1000
+ - 58s - loss: 0.0025 - match_rate: 0.9762 - val_loss: 0.0076 - val_match_rate: 0.9620
+Epoch 187/1000
+ - 59s - loss: 0.0025 - match_rate: 0.9762 - val_loss: 0.0076 - val_match_rate: 0.9619
+Epoch 188/1000
+ - 60s - loss: 0.0025 - match_rate: 0.9762 - val_loss: 0.0076 - val_match_rate: 0.9619
+Epoch 189/1000
+ - 60s - loss: 0.0025 - match_rate: 0.9762 - val_loss: 0.0075 - val_match_rate: 0.9620
+Epoch 190/1000
+ - 59s - loss: 0.0025 - match_rate: 0.9762 - val_loss: 0.0076 - val_match_rate: 0.9619
+Epoch 191/1000
+ - 60s - loss: 0.0025 - match_rate: 0.9762 - val_loss: 0.0076 - val_match_rate: 0.9619
+Epoch 192/1000
+ - 59s - loss: 0.0025 - match_rate: 0.9762 - val_loss: 0.0075 - val_match_rate: 0.9620
+Epoch 193/1000
+ - 60s - loss: 0.0025 - match_rate: 0.9762 - val_loss: 0.0076 - val_match_rate: 0.9619
+Epoch 194/1000
+ - 59s - loss: 0.0025 - match_rate: 0.9762 - val_loss: 0.0075 - val_match_rate: 0.9620
+Epoch 195/1000
+ - 60s - loss: 0.0025 - match_rate: 0.9762 - val_loss: 0.0076 - val_match_rate: 0.9620
+Epoch 196/1000
+ - 59s - loss: 0.0025 - match_rate: 0.9762 - val_loss: 0.0076 - val_match_rate: 0.9620
+Epoch 197/1000
+ - 59s - loss: 0.0025 - match_rate: 0.9762 - val_loss: 0.0076 - val_match_rate: 0.9619
+Epoch 198/1000
+ - 59s - loss: 0.0025 - match_rate: 0.9762 - val_loss: 0.0076 - val_match_rate: 0.9620
+Epoch 199/1000
+ - 60s - loss: 0.0025 - match_rate: 0.9762 - val_loss: 0.0075 - val_match_rate: 0.9620
+Epoch 200/1000
+ - 59s - loss: 0.0025 - match_rate: 0.9762 - val_loss: 0.0076 - val_match_rate: 0.9619
+Epoch 201/1000
+ - 59s - loss: 0.0025 - match_rate: 0.9762 - val_loss: 0.0075 - val_match_rate: 0.9620
+Epoch 202/1000
+ - 60s - loss: 0.0025 - match_rate: 0.9762 - val_loss: 0.0076 - val_match_rate: 0.9620
+Epoch 203/1000
+ - 59s - loss: 0.0025 - match_rate: 0.9762 - val_loss: 0.0076 - val_match_rate: 0.9620
+End training...
+/home/dxu/.local/lib/python3.6/site-packages/keras/engine/network.py:872: UserWarning: Layer cu_dnngru_2 was passed non-serializable keyword arguments: {'initial_state': [<tf.Tensor 'cu_dnngru_1/strided_slice_12:0' shape=(?, 256) dtype=float32>]}. They will not be included in the serialized model (and thus will be missing at deserialization time).
+  '. They will not be included '
