@@ -66,5 +66,9 @@ def main():
     ds.to_csv('train_data.csv', header=False, index=False)
 
 
-if __name__ == '__main__':
-    main()
+# if __name__ == '__main__':
+#     main()
+
+ex1 = '-y-1'
+ex2 = 'x^y'
+print(is_equivalent(ex1, ex2, 16))
